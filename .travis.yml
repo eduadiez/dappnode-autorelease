@@ -15,4 +15,4 @@ jobs:
         skip_cleanup: true
         github-token: $GITHUB_TOKEN
         script: npx semantic-release
-        script: npm -g @dappnode/dappnodesdk
+        script: npm i -g @dappnode/dappnodesdk
