@@ -7,17 +7,20 @@ jobs:
   include:
     # Define the release stage that runs semantic-release
     - stage: release
-      node_js: lts/*
-      env:
-        - SILENT=true
-        - PROVIDER=wss://mainnet.infura.io/ws 
-      # Advanced: optionally overwrite your default `script` step to skip the tests
-      script: skip
-      deploy:
-        provider: script
-        skip_cleanup: true
-        github-token: $GITHUB_TOKEN
-        scritp:
-          - npx semantic-release
-          - npm i -g @dappnode/dappnodesdk
-          - dappnodesdk publish patch
+      node_js: 8
+        services:
+          - docker
+          - docker-compose
+        env:
+          - SILENT=true
+          - PROVIDER=wss://mainnet.infura.io/ws 
+        # Advanced: optionally overwrite your default `script` step to skip the tests
+        script: skip
+        deploy:
+          provider: script
+          skip_cleanup: true
+          github-token: $GITHUB_TOKENa
+          script: 
+            - npx semantic-release
+            - npm i -g @dappnode/dappnodesdk
+            - dappnodesdk publish patch
