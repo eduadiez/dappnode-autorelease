@@ -15,7 +15,6 @@ jobs:
           - SILENT=true
           - PROVIDER=wss://mainnet.infura.io/ws 
         # Advanced: optionally overwrite your default `script` step to skip the tests
-        script: skip
         deploy:
           provider: script
           skip_cleanup: true
