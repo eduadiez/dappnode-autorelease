@@ -18,7 +18,7 @@ jobs:
         deploy:
           provider: script
           skip_cleanup: true
-          github-token: $GITHUB_TOKENa
+          github-token: $GITHUB_TOKEN
           script: 
             - npx semantic-release
             - npm i -g @dappnode/dappnodesdk
