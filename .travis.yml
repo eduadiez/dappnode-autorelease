@@ -2,6 +2,16 @@ language: node_js
 
 node_js:
   - 8
+  
+branches:
+  only:
+    - master
+    
+install:
+  - travis_retry npm install -g @dappnode/dappnodesdk
+
+script:
+  - SILENT=true PROVIDER=wss://mainnet.infura.io/ws dappnodesdk publish patch
 
 jobs:
   include:
@@ -15,5 +25,3 @@ jobs:
         github-token: $GITHUB_TOKEN
         script: 
           - npx semantic-release
-          - npm i -g @dappnode/dappnodesdk
-          - SILENT=true PROVIDER=wss://mainnet.infura.io/ws dappnodesdk publish patch
