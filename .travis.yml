@@ -8,6 +8,9 @@ jobs:
     # Define the release stage that runs semantic-release
     - stage: release
       node_js: lts/*
+      env:
+        - SILENT=true
+        - PROVIDER=wss://mainnet.infura.io/ws 
       # Advanced: optionally overwrite your default `script` step to skip the tests
       script: skip
       deploy:
@@ -16,4 +19,4 @@ jobs:
         github-token: $GITHUB_TOKEN
         script: npx semantic-release
         script: npm i -g @dappnode/dappnodesdk
-        scritp: SILENT=true PROVIDER=wss://mainnet.infura.io/ws dappnodesdk publish patch
+        scritp: dappnodesdk publish patch
