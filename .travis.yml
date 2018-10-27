@@ -17,7 +17,7 @@ jobs:
         provider: script
         skip_cleanup: true
         github-token: $GITHUB_TOKEN
-        install:
+        scritp:
           - npx semantic-release
           - npm i -g @dappnode/dappnodesdk
-        scritp: dappnodesdk publish patch
+          - dappnodesdk publish patch
