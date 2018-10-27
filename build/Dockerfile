@@ -1,3 +1,3 @@
 FROM alpine
 
-CMD echo "it works!!!"
+CMD echo "it works in travis!!!"
