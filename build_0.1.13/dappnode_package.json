@@ -1,0 +1,15 @@
+{
+  "name": "admin.dnp.dappnode.eth",
+  "version": "0.1.13",
+  "description": "Testing",
+  "avatar": "/ipfs/QmQP1DyNH8upeBxKJYtfCDdUj3mRcZep8zhJTLe3ePXB7M",
+  "type": "service",
+  "image": {
+    "path": "admin.dnp.dappnode.eth_0.1.13.tar.xz",
+    "hash": "/ipfs/QmWEHPtaQK1t8CNVUZum5fUHVidtPuWpyN2ap7evuHbTEq",
+    "size": 40,
+    "restart": "always"
+  },
+  "author": "lion",
+  "license": ""
+}
