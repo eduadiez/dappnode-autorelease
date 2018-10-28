@@ -1,12 +1,9 @@
 {
   "plugins": [
     "@semantic-release/commit-analyzer",
-    "prepare": [
-    {
-      "path": "@semantic-release/exec",
-      "cmd": "set-version v0.1.1"
-    }
-    ],
+    ["@semantic-release/exec", {
+      "publishCmd": "./publish.sh v0.1.13"
+    }],
     "@semantic-release/release-notes-generator",
     [
       "@semantic-release/github",
