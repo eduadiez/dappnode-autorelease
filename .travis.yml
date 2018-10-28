@@ -11,7 +11,7 @@ install:
   - travis_retry npm install -g @dappnode/dappnodesdk
 
 script:
-  - SILENT=true PROVIDER=wss://mainnet.infura.io/ws dappnodesdk publish patch
+  - IPFS_PROVIDER=ipfs.infura.io IPFS_PROTO=https SILENT=true PROVIDER=wss://mainnet.infura.io/ws dappnodesdk publish patch
 
 jobs:
   include:
