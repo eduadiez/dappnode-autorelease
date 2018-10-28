@@ -12,10 +12,11 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin https://${GITHUB_TOKEN}@github.com/eduadiez/dappnode-autorelease.git > /dev/null 2>&1
+  git remote add origin https:///eduadiez:${GITHUB_TOKEN}@github.com/eduadiez/dappnode-autorelease.git > /dev/null 2>&1
   git push --quiet --set-upstream origin other
 }
-
+echo "GITHUB_TOKEN"
+echo $GITHUB_TOKEN
 setup_git
 commit_website_files
 upload_files
