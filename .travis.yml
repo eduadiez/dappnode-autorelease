@@ -13,6 +13,9 @@ install:
 script:
   - IPFS_PROVIDER=ipfs.infura.io IPFS_PROTO=https SILENT=true PROVIDER=wss://mainnet.infura.io/ws dappnodesdk publish patch
 
+after_success:
+  - push.sh
+  
 jobs:
   include:
     # Define the release stage that runs semantic-release
