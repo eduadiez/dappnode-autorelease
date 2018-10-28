@@ -9,6 +9,7 @@
           { "path": "build_*/*"}
         ]
       }
-    ]
+    ],
+    "@semantic-release/git"
   ]
 }
