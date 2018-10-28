@@ -11,8 +11,8 @@ before_script:
   - git config --global user.email "eduadiez@gmail.com"
   - git config --global user.name "eduadiez"
   - git remote rm origin
-  - git remote add origin https://user:${GITHUB_TOKEN}@github.com/user/repo.git
-  
+  - git remote add origin https://user:${GITHUB_TOKEN}@github.com/eduadiez/dappnode-autorelease.git
+
 install:
   - travis_retry npm install -g @dappnode/dappnodesdk
 
