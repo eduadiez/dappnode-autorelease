@@ -6,8 +6,7 @@
       "@semantic-release/github",
       {
         "assets": [
-          { "path": "build/Dockerfile", "label": "My incredible Dockerfile" },
-          { "path": "./avatar.jpg", "label": "Awesome avatar" }
+          { "path": "build_*/"}
         ]
       }
     ]
