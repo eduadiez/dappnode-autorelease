@@ -1,0 +1,7 @@
+version: "3.4"
+services:
+  package_name.public.dappnode.eth:
+    image: "package_name.public.dappnode.eth:0.1.0"
+    build: ./build
+volumes:
+  ipfsdnpdappnodeeth_export: {}
